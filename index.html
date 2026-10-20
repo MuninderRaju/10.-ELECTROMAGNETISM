@@ -1,0 +1,386 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Class 10 Physical Science - Electromagnetism</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1746a2;--red:#c52222;--green:#145b32;--lightgreen:#effcf3}
+*{box-sizing:border-box}
+body{margin:0;background:#f2f5f9;color:#172033;font-family:"Noto Sans Telugu",Arial,sans-serif;line-height:1.65}
+header{position:sticky;top:0;z-index:10;background:var(--blue);color:white;padding:14px 18px;box-shadow:0 2px 8px #0002}
+.head{max-width:1050px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:12px}
+h1{font-size:clamp(18px,3vw,27px);margin:0}
+.sub{font-size:13px;color:#dce7ff}
+button{font:inherit;cursor:pointer}
+#lang{border:0;border-radius:8px;background:#ffdb42;color:#172033;font-weight:bold;padding:10px 13px}
+main{max-width:1050px;margin:auto;padding:18px 12px}
+.intro,.section,.qa,.quizcard{background:white;border-radius:12px;margin-bottom:15px;overflow:hidden;box-shadow:0 2px 7px #0000000b}
+.intro{padding:18px}
+.section-title{background:#e5edff;color:#123c89;padding:12px 16px;font-size:19px;font-weight:bold;border-left:5px solid var(--blue)}
+.qtitle{background:#fff1f1;color:var(--red);padding:14px 16px;font-weight:bold;cursor:pointer;display:flex;justify-content:space-between;gap:12px}
+.answer{display:none;background:var(--lightgreen);color:var(--green);padding:16px;border-top:1px solid #b5e7c6}
+.answer.open{display:block}
+.answer p{margin:7px 0}
+.answer ul,.answer ol{padding-left:24px}
+.diagram{background:white;border:1px solid #d3d9e3;border-radius:12px;margin:14px 0;padding:10px;overflow:hidden}
+.diagram svg{width:100%;height:auto;display:block;max-width:760px;margin:auto}
+.caption{text-align:center;color:#475569;font-size:14px;font-weight:bold}
+.quizcard{padding:15px;border:1px solid #d7deea}
+.quizcard.correct{border:2px solid #219653;background:#f0fff5}
+.quizcard.wrong{border:2px solid #d93025;background:#fff5f5}
+.qtext{font-weight:bold;margin-bottom:10px}
+.option{display:flex;align-items:flex-start;gap:9px;padding:7px 5px;border-radius:6px;cursor:pointer}
+.option input{margin-top:7px;flex-shrink:0}
+.feedback{display:none;margin-top:10px;padding:10px;border-radius:7px}
+.feedback.show{display:block}
+.good{background:#d8f8e3;color:#155c32}
+.bad{background:#ffe0e0;color:#9b1515}
+.actions{text-align:center;padding:16px}
+.primary{background:var(--blue);color:white;border:0;border-radius:8px;padding:11px 22px;font-weight:bold;margin:4px}
+footer{text-align:center;background:#111827;color:white;padding:20px 12px;font-size:13px}
+svg text{font-family:Arial,"Noto Sans Telugu",sans-serif}
+@media(max-width:520px){
+ header{padding:10px}
+ .head{align-items:flex-start}
+ #lang{padding:8px;font-size:12px;max-width:115px}
+ main{padding:10px 7px}
+ .section-title{font-size:16px}
+ .qtitle{font-size:14px;padding:12px}
+ .answer{padding:12px;font-size:14px}
+ .intro{padding:12px}
+ .quizcard{padding:11px}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="head">
+  <div>
+   <h1>10. ELECTROMAGNETISM</h1>
+   <div class="sub">Class 10 Physical Science | Abhyasa Deepika Solutions</div>
+  </div>
+  <button id="lang" type="button" onclick="toggleLanguage()">తెలుగులో చూడండి</button>
+ </div>
+</header>
+
+<main>
+<div class="intro">
+ <strong>Study material:</strong>
+ <span class="en">Question-wise answers, labelled diagrams and a self-evaluation quiz.</span>
+ <span class="te">ప్రశ్నల వారీగా సమాధానాలు, పేర్లు సూచించిన పటాలు, స్వీయ మూల్యాంకన క్విజ్.</span>
+</div>
+
+<div class="section-title">
+ <span class="en">Section 1: Very Short Answer Questions</span>
+ <span class="te">విభాగం 1: అతి స్వల్ప సమాధాన ప్రశ్నలు</span>
+</div>
+<div id="veryShort"></div>
+
+<div class="section-title">
+ <span class="en">Section 2: Short Answer Questions</span>
+ <span class="te">విభాగం 2: స్వల్ప సమాధాన ప్రశ్నలు</span>
+</div>
+<div id="short"></div>
+
+<div class="section-title">
+ <span class="en">Section 3: Essay Answer Questions</span>
+ <span class="te">విభాగం 3: వ్యాసరూప సమాధాన ప్రశ్నలు</span>
+</div>
+<div id="essay"></div>
+
+<div class="section-title">
+ <span class="en">Section 4: Multiple Choice Quiz — 10 Marks</span>
+ <span class="te">విభాగం 4: బహుళైచ్ఛిక ప్రశ్నల క్విజ్ — 10 మార్కులు</span>
+</div>
+<div class="intro">
+ <span class="en">Select one answer for each question and press Submit Quiz.</span>
+ <span class="te">ప్రతి ప్రశ్నకు ఒక సమాధానం ఎంచుకుని క్విజ్ సమర్పించండి బటన్ నొక్కండి.</span>
+</div>
+<div id="quiz"></div>
+<div class="actions">
+ <button class="primary" onclick="submitQuiz()">
+  <span class="en">Submit Quiz</span><span class="te">క్విజ్ సమర్పించండి</span>
+ </button>
+ <button class="primary" onclick="resetQuiz()">
+  <span class="en">Reset Quiz</span><span class="te">మళ్లీ ప్రారంభించండి</span>
+ </button>
+</div>
+<div id="score" class="intro" hidden></div>
+</main>
+
+<footer>
+ <strong>Prepared &amp; Designed by A Muninder Raju</strong><br>
+ GHM, ZPHS CHINCHOLI (B), Nirmal District, Telangana
+</footer>
+
+<script>
+let isTe=false;
+function toggleLanguage(){
+ isTe=!isTe;
+ document.body.classList.toggle("telugu",isTe);
+ document.documentElement.lang=isTe?"te":"en";
+ document.getElementById("lang").textContent=isTe?"View in English":"తెలుగులో చూడండి";
+ if(document.getElementById("score").hidden===false) submitQuiz(true);
+}
+const QA={
+veryShort:[
+["List the equipment required for Oersted's experiment.",
+"ఆర్టెడ్ ప్రయోగానికి కావలసిన పరికరాలను తెలపండి.",
+"Magnetic compass, insulated copper wire, battery, switch and connecting leads.",
+"అయస్కాంత దిక్సూచి, ఇన్సులేషన్ ఉన్న రాగి తీగ, బ్యాటరీ, స్విచ్, కలిపే తీగలు."],
+["What is a magnetic field?",
+"అయస్కాంత క్షేత్రం అంటే ఏమిటి?",
+"The region around a magnet or current-carrying conductor where magnetic force can be detected is called a magnetic field.",
+"అయస్కాంతం లేదా విద్యుత్ ప్రవహించే తీగ చుట్టూ అయస్కాంత బలాన్ని గుర్తించగల ప్రాంతాన్ని అయస్కాంత క్షేత్రం అంటారు."],
+["Write any three properties of magnetic field lines.",
+"అయస్కాంత బలరేఖలలో ఏవైనా మూడు ధర్మాలు రాయండి.",
+"Outside a magnet, field lines go from North to South. They form closed continuous curves. They never intersect. Closer lines indicate a stronger field.",
+"అయస్కాంతం వెలుపల బలరేఖలు ఉత్తర ధ్రువం నుంచి దక్షిణ ధ్రువానికి వెళ్తాయి. అవి సంవృత వక్రాలను ఏర్పరుస్తాయి. ఒకదానినొకటి ఖండించవు. దగ్గరగా ఉన్న రేఖలు బలమైన క్షేత్రాన్ని సూచిస్తాయి."],
+["State the right-hand thumb rule.",
+"కుడిచేతి బొటనవేలు నియమాన్ని తెలపండి.",
+"Hold the current-carrying wire in your right hand with the thumb pointing along conventional current. The curled fingers show the direction of the magnetic field.",
+"విద్యుత్ ప్రవహించే తీగను కుడిచేత్తో పట్టుకుని బొటనవేలును సంప్రదాయ విద్యుత్ ప్రవాహ దిశలో ఉంచితే, మిగిలిన ముడిచిన వేళ్లు అయస్కాంత క్షేత్ర దిశను సూచిస్తాయి."],
+["What happens when a bar magnet is brought near a CRT television screen?",
+"బార్ అయస్కాంతాన్ని CRT టీవీ తెరకు దగ్గరగా తెస్తే ఏమవుతుంది?",
+"The picture may become distorted because the magnetic field deflects the electron beam inside a CRT. This does not apply in the same way to modern LCD/LED screens.",
+"CRT టీవీలో ఎలక్ట్రాన్ పుంజాన్ని అయస్కాంత క్షేత్రం విక్షేపం చేయడం వల్ల చిత్రం వక్రీకరించబడవచ్చు. ఆధునిక LCD/LED తెరలకు ఇదే ప్రభావం వర్తించదు."],
+["What is the magnetic force on a moving charge travelling parallel to a magnetic field?",
+"అయస్కాంత క్షేత్రానికి సమాంతరంగా చలించే ఆవేశంపై అయస్కాంత బలం ఎంత?",
+"Zero, because F = qvB sin θ and θ = 0°, so sin 0° = 0.",
+"బలం సున్నా. ఎందుకంటే F = qvB sin θ; ఇక్కడ θ = 0° కనుక sin 0° = 0."],
+["What is the role of a commutator in a DC motor?",
+"DC మోటార్‌లో కమ్యూటేటర్ పాత్ర ఏమిటి?",
+"The split-ring commutator reverses the current in the armature coil every half-turn, helping the coil continue rotating in the same direction.",
+"స్ప్లిట్-రింగ్ కమ్యూటేటర్ ప్రతి అర్ధ భ్రమణానికి ఆర్మేచర్ కాయిల్‌లో విద్యుత్ దిశను మారుస్తుంది. దాంతో కాయిల్ ఒకే దిశలో తిరుగుతూ ఉంటుంది."],
+["State one difference between AC and DC generators.",
+"AC, DC జనరేటర్ల మధ్య ఒక తేడా తెలపండి.",
+"An AC generator uses slip rings to deliver alternating current; a simple DC generator uses a split-ring commutator to deliver unidirectional current.",
+"AC జనరేటర్ స్లిప్ రింగుల ద్వారా ఏకాంతర విద్యుత్‌ను అందిస్తుంది. సాధారణ DC జనరేటర్ స్ప్లిట్-రింగ్ కమ్యూటేటర్ ద్వారా ఏకదిశా విద్యుత్‌ను అందిస్తుంది."]
+],
+short:[
+["Write the observations of Oersted's experiment.",
+"ఆర్టెడ్ ప్రయోగ పరిశీలనలు రాయండి.",
+["When current flows through a wire placed near a compass, the needle deflects.","Reversing the current reverses the deflection.","When the current is switched off, the needle returns approximately to its original direction."],
+["దిక్సూచి దగ్గర ఉన్న తీగలో విద్యుత్ ప్రవహించినప్పుడు సూది విక్షేపం చెందుతుంది.","విద్యుత్ దిశను మార్చితే సూది విక్షేప దిశ కూడా మారుతుంది.","విద్యుత్ నిలిపివేసినప్పుడు సూది సుమారు తన మొదటి దిశకు వస్తుంది."]],
+["Explain magnetic flux and magnetic flux density.",
+"అయస్కాంత అభివాహం, అయస్కాంత అభివాహ సాంద్రతలను వివరించండి.",
+["Magnetic flux (Φ) describes the magnetic field passing through a surface. Its SI unit is weber (Wb).","Magnetic flux density (B) is flux per unit area when the field is normal to the surface: B = Φ/A. Its SI unit is tesla (T), equal to Wb/m²."],
+["అయస్కాంత అభివాహం (Φ) ఒక ఉపరితలం గుండా వెళ్లే అయస్కాంత క్షేత్ర పరిమాణాన్ని వివరిస్తుంది. SI ప్రమాణం వెబర్ (Wb).","అయస్కాంత క్షేత్రం ఉపరితలానికి లంబంగా ఉన్నప్పుడు, యూనిట్ వైశాల్యానికి అభివాహాన్ని అయస్కాంత అభివాహ సాంద్రత (B) అంటారు: B = Φ/A. SI ప్రమాణం టెస్లా (T), అంటే Wb/m²."]],
+["What factors affect the force on a current-carrying conductor in a magnetic field?",
+"అయస్కాంత క్షేత్రంలోని విద్యుత్ ప్రవాహ తీగపై బలాన్ని ప్రభావితం చేసే అంశాలేవి?",
+["The force is F = BIL sin θ.","It increases with magnetic field strength B, current I and conductor length L in the field.","It depends on angle θ between current and field. It is maximum at 90° and zero at 0°."],
+["బలం F = BIL sin θ.","అయస్కాంత క్షేత్ర బలం B, విద్యుత్ ప్రవాహం I, క్షేత్రంలో ఉన్న తీగ పొడవు L పెరిగితే బలం పెరుగుతుంది.","విద్యుత్ ప్రవాహం, అయస్కాంత క్షేత్రం మధ్య కోణం θపై కూడా ఆధారపడి ఉంటుంది. 90° వద్ద గరిష్ఠం; 0° వద్ద సున్నా."]],
+["Explain Fleming's left-hand rule.",
+"ఫ్లెమింగ్ ఎడమచేతి నియమాన్ని వివరించండి.",
+["Stretch the thumb, forefinger and middle finger of the left hand mutually perpendicular to each other.","Forefinger indicates magnetic field, middle finger indicates conventional current, and thumb indicates force or motion."],
+["ఎడమచేతి బొటనవేలు, చూపుడు వేలు, మధ్య వేలు ఒకదానికొకటి లంబంగా ఉండేలా చాపాలి.","చూపుడు వేలు అయస్కాంత క్షేత్ర దిశను, మధ్య వేలు విద్యుత్ ప్రవాహ దిశను, బొటనవేలు బలం లేదా చలన దిశను సూచిస్తాయి."]],
+["What is electromagnetic induction?",
+"విద్యుదయస్కాంత ప్రేరణ అంటే ఏమిటి?",
+"When the magnetic flux linked with a coil changes, an emf is induced in it. If the circuit is closed, an induced current flows. This is electromagnetic induction.",
+"కాయిల్‌తో అనుసంధానమైన అయస్కాంత అభివాహం మారినప్పుడు దానిలో విద్యుచ్చాలక బలం ప్రేరేపించబడుతుంది. వలయం మూసి ఉంటే ప్రేరిత విద్యుత్ ప్రవహిస్తుంది. దీనినే విద్యుదయస్కాంత ప్రేరణ అంటారు."]
+],
+essay:[
+["Explain the experimental procedure demonstrating the magnetic force on a current-carrying wire.",
+"విద్యుత్ ప్రవహించే తీగపై అయస్కాంత బలం పనిచేస్తుందని చూపే ప్రయోగ విధానాన్ని వివరించండి.",
+`<b>Aim:</b> To demonstrate that a current-carrying conductor experiences a force in a magnetic field.<br><b>Apparatus:</b> Horseshoe magnet, light aluminium rod, stand, battery, switch and connecting wires.<br><b>Procedure:</b><ol><li>Place the aluminium rod between the poles of the horseshoe magnet so it can move freely.</li><li>Connect the rod in a circuit with a battery and switch.</li><li>Close the switch and observe the rod's movement.</li><li>Reverse the current and observe the direction again.</li><li>If possible, reverse the magnetic poles and compare the motion.</li></ol><b>Observation:</b> The rod moves when current flows. Reversing the current or the field reverses the force direction.<br><b>Conclusion:</b> A current-carrying conductor experiences a magnetic force. Its direction can be found using Fleming's left-hand rule.`,
+`<b>లక్ష్యం:</b> అయస్కాంత క్షేత్రంలో విద్యుత్ ప్రవహించే తీగపై బలం పనిచేస్తుందని నిరూపించడం.<br><b>పరికరాలు:</b> గుర్రపునాడా అయస్కాంతం, తేలికపాటి అల్యూమినియం కడ్డీ, స్టాండ్, బ్యాటరీ, స్విచ్, కలిపే తీగలు.<br><b>విధానం:</b><ol><li>అల్యూమినియం కడ్డీ స్వేచ్ఛగా కదిలేలా అయస్కాంత ధ్రువాల మధ్య ఉంచాలి.</li><li>కడ్డీని బ్యాటరీ, స్విచ్‌తో కూడిన వలయానికి కలపాలి.</li><li>స్విచ్ ఆన్ చేసి కడ్డీ కదలికను గమనించాలి.</li><li>విద్యుత్ ప్రవాహ దిశను మార్చి కదలిక దిశను గమనించాలి.</li><li>వీలైతే అయస్కాంత ధ్రువాల దిశను మార్చి పోల్చాలి.</li></ol><b>పరిశీలన:</b> విద్యుత్ ప్రవహించినప్పుడు కడ్డీ కదులుతుంది. విద్యుత్ లేదా అయస్కాంత క్షేత్ర దిశను మార్చితే బలం దిశ మారుతుంది.<br><b>ముగింపు:</b> విద్యుత్ ప్రవహించే తీగపై అయస్కాంత బలం పనిచేస్తుంది. దిశను ఫ్లెమింగ్ ఎడమచేతి నియమంతో తెలుసుకోవచ్చు.`],
+["Explain the construction and working of an electric motor.",
+"విద్యుత్ మోటార్ నిర్మాణం, పనితీరును వివరించండి.",
+`<b>Principle:</b> A current-carrying coil in a magnetic field experiences forces that produce rotation.<br><b>Construction:</b> A rectangular armature coil ABCD is placed between the N and S poles of a magnet. The coil is connected to a split-ring commutator. Carbon brushes connect the commutator to a DC supply.<br><b>Working:</b><ol><li>When current flows, the two sides of the coil experience forces in opposite directions.</li><li>These forces produce a turning effect (torque) and rotate the coil.</li><li>After each half-turn, the split-ring commutator reverses current in the coil.</li><li>The torque continues in the same rotational direction, so the coil keeps rotating.</li></ol><b>Energy conversion:</b> Electrical energy changes into mechanical energy.`,
+`<b>సూత్రం:</b> అయస్కాంత క్షేత్రంలో విద్యుత్ ప్రవహించే కాయిల్‌పై బలాలు పనిచేసి భ్రమణాన్ని కలిగిస్తాయి.<br><b>నిర్మాణం:</b> ABCD దీర్ఘచతురస్రాకార ఆర్మేచర్ కాయిల్‌ను అయస్కాంతం N, S ధ్రువాల మధ్య ఉంచుతారు. కాయిల్‌ను స్ప్లిట్-రింగ్ కమ్యూటేటర్‌కు కలుపుతారు. కార్బన్ బ్రష్‌లు కమ్యూటేటర్‌ను DC విద్యుత్ సరఫరాకు కలుపుతాయి.<br><b>పనిచేయు విధానం:</b><ol><li>విద్యుత్ ప్రవహించినప్పుడు కాయిల్‌కు ఎదురెదురు భుజాలపై వ్యతిరేక దిశల్లో బలాలు పనిచేస్తాయి.</li><li>ఈ బలాలు భ్రమణ ప్రభావాన్ని కలిగించి కాయిల్‌ను తిప్పుతాయి.</li><li>ప్రతి అర్ధ భ్రమణం తర్వాత స్ప్లిట్-రింగ్ కమ్యూటేటర్ కాయిల్‌లో విద్యుత్ దిశను మారుస్తుంది.</li><li>భ్రమణ బలం అదే దిశలో కొనసాగుతుంది; కాయిల్ నిరంతరం తిరుగుతుంది.</li></ol><b>శక్తి మార్పు:</b> విద్యుత్ శక్తి యాంత్రిక శక్తిగా మారుతుంది.`],
+["Explain the construction and working of an AC generator with a diagram.",
+"AC జనరేటర్ నిర్మాణం, విధానాన్ని పటంతో వివరించండి.",
+`<b>Principle:</b> Electromagnetic induction.<br><b>Construction:</b> A rectangular coil rotates between the N and S poles of a magnet. Its ends are connected to two separate slip rings. Carbon brushes press against the rings and connect to an external circuit.<br><b>Working:</b><ol><li>Mechanical energy rotates the coil in the magnetic field.</li><li>The magnetic flux linked with the coil changes, inducing an emf.</li><li>During the first half-turn, current flows in one direction through the external circuit.</li><li>During the next half-turn, the induced emf and current reverse direction.</li></ol><b>Result:</b> The generator produces alternating current (AC). Slip rings maintain continuous connections to the rotating coil.`,
+`<b>సూత్రం:</b> విద్యుదయస్కాంత ప్రేరణ.<br><b>నిర్మాణం:</b> దీర్ఘచతురస్రాకార కాయిల్‌ను అయస్కాంతం N, S ధ్రువాల మధ్య తిప్పుతారు. కాయిల్ చివరలను రెండు వేర్వేరు స్లిప్ రింగులకు కలుపుతారు. కార్బన్ బ్రష్‌లు రింగులను తాకుతూ బాహ్య వలయానికి అనుసంధానిస్తాయి.<br><b>పనిచేయు విధానం:</b><ol><li>యాంత్రిక శక్తితో కాయిల్‌ను అయస్కాంత క్షేత్రంలో తిప్పుతారు.</li><li>కాయిల్‌కు అనుసంధానమైన అయస్కాంత అభివాహం మారి విద్యుచ్చాలక బలం ప్రేరేపిస్తుంది.</li><li>మొదటి అర్ధ భ్రమణంలో బాహ్య వలయంలో విద్యుత్ ఒక దిశలో ప్రవహిస్తుంది.</li><li>తదుపరి అర్ధ భ్రమణంలో ప్రేరిత విద్యుచ్చాలక బలం, విద్యుత్ దిశలు మారుతాయి.</li></ol><b>ఫలితం:</b> జనరేటర్ ఏకాంతర విద్యుత్ (AC) ఉత్పత్తి చేస్తుంది. స్లిప్ రింగులు తిరిగే కాయిల్‌తో నిరంతర అనుసంధానాన్ని కల్పిస్తాయి.`],
+["Explain Faraday's law of electromagnetic induction with an activity.",
+"ఫెరడే విద్యుదయస్కాంత ప్రేరణ నియమాన్ని ప్రయోగంతో వివరించండి.",
+`<b>Apparatus:</b> Bar magnet, insulated coil, galvanometer and connecting wires.<br><b>Procedure:</b><ol><li>Connect the coil to a galvanometer.</li><li>Move the north pole of the magnet towards the coil and observe the pointer.</li><li>Hold the magnet still and observe the pointer.</li><li>Move the magnet away from the coil.</li><li>Repeat using the south pole or change the direction of motion.</li></ol><b>Observations:</b> The galvanometer deflects while the magnet moves. It shows no sustained deflection when the magnet is stationary. Reversing the motion reverses the deflection.<br><b>Law:</b> The induced emf is proportional to the rate of change of magnetic flux linkage: ε = −N ΔΦ/Δt. The minus sign represents Lenz's law.`,
+`<b>పరికరాలు:</b> బార్ అయస్కాంతం, ఇన్సులేటెడ్ కాయిల్, గాల్వానోమీటర్, కలిపే తీగలు.<br><b>విధానం:</b><ol><li>కాయిల్‌ను గాల్వానోమీటర్‌కు కలపాలి.</li><li>అయస్కాంత ఉత్తర ధ్రువాన్ని కాయిల్ వైపు కదిలించి సూది విక్షేపాన్ని గమనించాలి.</li><li>అయస్కాంతాన్ని నిలిపి సూదిని గమనించాలి.</li><li>అయస్కాంతాన్ని కాయిల్ నుంచి దూరంగా కదిలించాలి.</li><li>దక్షిణ ధ్రువంతో లేదా కదలిక దిశను మార్చి మళ్లీ పరీక్షించాలి.</li></ol><b>పరిశీలనలు:</b> అయస్కాంతం కదిలినప్పుడు గాల్వానోమీటర్ విక్షేపం చెందుతుంది. అయస్కాంతం నిలకడగా ఉన్నప్పుడు నిరంతర విక్షేపం ఉండదు. కదలిక దిశను మార్చితే విక్షేప దిశ మారుతుంది.<br><b>నియమం:</b> ప్రేరిత విద్యుచ్చాలక బలం అయస్కాంత అభివాహ అనుసంధాన మార్పు రేటుకు అనులోమానుపాతంలో ఉంటుంది: ε = −N ΔΦ/Δt. ఋణ చిహ్నం లెంజ్ నియమాన్ని సూచిస్తుంది.`],
+["Write applications of Faraday's law in daily life.",
+"దైనందిన జీవితంలో ఫెరడే నియమం అనువర్తనాలు రాయండి.",
+`<ul><li>Electric generators produce electricity by electromagnetic induction.</li><li>Transformers transfer energy between coils through changing magnetic flux.</li><li>Induction cooktops heat suitable cookware through induced currents.</li><li>Dynamic microphones and some pickup devices use electromagnetic induction.</li><li>Metal detectors use electromagnetic effects to detect metal objects.</li></ul><b>Note:</b> Magnetic-stripe card readers detect encoded magnetic patterns; it is inaccurate to say that all ATM cards work by Faraday induction.`,
+`<ul><li>విద్యుదయస్కాంత ప్రేరణ ద్వారా విద్యుత్ జనరేటర్లు విద్యుత్‌ను ఉత్పత్తి చేస్తాయి.</li><li>మారుతున్న అయస్కాంత అభివాహం ద్వారా ట్రాన్స్‌ఫార్మర్లు కాయిళ్ల మధ్య శక్తిని బదిలీ చేస్తాయి.</li><li>ఇండక్షన్ కుక్‌టాప్‌లు ప్రేరిత విద్యుత్ ప్రవాహాల ద్వారా అనుకూల పాత్రలను వేడి చేస్తాయి.</li><li>డైనమిక్ మైక్రోఫోన్లు, కొన్ని పికప్ పరికరాలు విద్యుదయస్కాంత ప్రేరణను ఉపయోగిస్తాయి.</li><li>మెటల్ డిటెక్టర్లు లోహ వస్తువులను గుర్తించడానికి విద్యుదయస్కాంత ప్రభావాలను ఉపయోగిస్తాయి.</li></ul><b>గమనిక:</b> మాగ్నెటిక్ స్ట్రైప్ కార్డ్ రీడర్లు కార్డులోని అయస్కాంత నమూనాలను గుర్తిస్తాయి. అన్ని ATM కార్డులు ఫెరడే ప్రేరణపై పనిచేస్తాయని చెప్పడం సరైంది కాదు.`],
+["Explain the magnetic field around a current-carrying straight conductor.",
+"విద్యుత్ ప్రవహించే సరళ తీగ చుట్టూ అయస్కాంత క్షేత్రాన్ని వివరించండి.",
+`<b>Activity:</b> Pass a straight wire vertically through a cardboard sheet. Sprinkle iron filings and pass current through the wire. Gently tap the cardboard.<br><b>Observation:</b> The filings arrange themselves in concentric circles around the wire. A compass placed at different points shows the field direction. Reversing current reverses the field direction.<br><b>Conclusion:</b> A current-carrying conductor produces a magnetic field. Its direction is given by the right-hand thumb rule.`,
+`<b>ప్రయోగం:</b> కార్డ్‌బోర్డ్ గుండా సరళ తీగను నిలువుగా ఉంచాలి. ఇనుప రజను చల్లి తీగలో విద్యుత్ ప్రవహింపజేసి కార్డ్‌బోర్డ్‌ను మెల్లగా తట్టాలి.<br><b>పరిశీలన:</b> ఇనుప రజను తీగ చుట్టూ ఏకకేంద్ర వృత్తాలుగా అమరుతుంది. వివిధ స్థానాల్లో దిక్సూచి క్షేత్ర దిశను చూపుతుంది. విద్యుత్ దిశను మార్చితే క్షేత్ర దిశ కూడా మారుతుంది.<br><b>ముగింపు:</b> విద్యుత్ ప్రవహించే తీగ అయస్కాంత క్షేత్రాన్ని ఉత్పత్తి చేస్తుంది. దిశను కుడిచేతి బొటనవేలు నియమంతో తెలుసుకోవచ్చు.`],
+["Explain the magnetic field of a solenoid.",
+"సోలినాయిడ్ అయస్కాంత క్షేత్రాన్ని వివరించండి.",
+`A solenoid is a long cylindrical coil containing many turns of insulated wire. When current flows, the field inside is strong and nearly uniform. The field outside resembles that of a bar magnet. The north and south poles can be identified using the right-hand grip rule. Increasing current or the number of turns per unit length strengthens the field.`,
+`సోలినాయిడ్ అనేది ఇన్సులేటెడ్ తీగతో అనేక చుట్లు కలిగిన పొడవైన స్థూపాకార కాయిల్. విద్యుత్ ప్రవహించినప్పుడు లోపల బలమైన, దాదాపు ఏకరీతి అయస్కాంత క్షేత్రం ఏర్పడుతుంది. బయట క్షేత్రం బార్ అయస్కాంత క్షేత్రంలా ఉంటుంది. కుడిచేతి పట్టుకునే నియమంతో ఉత్తర, దక్షిణ ధ్రువాలను గుర్తించవచ్చు. విద్యుత్ ప్రవాహం లేదా యూనిట్ పొడవులో చుట్ల సంఖ్య పెరిగితే క్షేత్రం బలపడుతుంది.`]
+]};
+
+function renderQA(target,items,prefix){
+ const host=document.getElementById(target);
+ items.forEach((q,i)=>{
+  const box=document.createElement("div");box.className="qa";
+  const title=document.createElement("div");title.className="qtitle";
+  title.innerHTML='<span><span class="en">'+(i+1)+'. '+q[0]+'</span><span class="te">'+(i+1)+'. '+q[1]+'</span></span><span>+</span>';
+  const answer=document.createElement("div");answer.className="answer";
+  let aEn=q[2],aTe=q[3];
+  if(Array.isArray(aEn)) aEn="<ul>"+aEn.map(x=>"<li>"+x+"</li>").join("")+"</ul>";
+  if(Array.isArray(aTe)) aTe="<ul>"+aTe.map(x=>"<li>"+x+"</li>").join("")+"</ul>";
+  answer.innerHTML='<div class="en">'+aEn+'</div><div class="te">'+aTe+'</div>';
+  title.onclick=()=>{answer.classList.toggle("open");title.lastElementChild.textContent=answer.classList.contains("open")?"−":"+"};
+  box.append(title,answer);host.append(box);
+ });
+}
+renderQA("veryShort",QA.veryShort);
+renderQA("short",QA.short);
+renderQA("essay",QA.essay);
+</script>
+
+<style>
+.te{display:none}
+body.telugu .en{display:none!important}
+body.telugu .te{display:inline}
+body.telugu .answer .te{display:block}
+</style>
+
+<script>
+/* Diagrams are intentionally different: Faraday activity and AC generator. */
+const diagramFaraday=`
+<div class="diagram">
+<svg viewBox="0 0 720 285" role="img" aria-label="Faraday induction experiment">
+<defs><marker id="fm" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#d62828"/></marker></defs>
+<text x="360" y="25" text-anchor="middle" font-size="20" font-weight="bold">Faraday's Electromagnetic Induction Activity</text>
+<rect x="35" y="88" width="78" height="65" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="3"/>
+<rect x="113" y="88" width="78" height="65" fill="#fecaca" stroke="#b91c1c" stroke-width="3"/>
+<text x="74" y="128" text-anchor="middle" font-size="25" font-weight="bold" fill="#1d4ed8">S</text>
+<text x="152" y="128" text-anchor="middle" font-size="25" font-weight="bold" fill="#b91c1c">N</text>
+<text x="113" y="177" text-anchor="middle" font-size="14">Bar magnet</text>
+<path d="M199 119 H282" stroke="#d62828" stroke-width="5" marker-end="url(#fm)"/>
+<text x="240" y="99" text-anchor="middle" font-size="15" fill="#b91c1c">Motion</text>
+<g fill="none" stroke="#16803d" stroke-width="5">
+<ellipse cx="322" cy="120" rx="15" ry="47"/><ellipse cx="340" cy="120" rx="15" ry="47"/>
+<ellipse cx="358" cy="120" rx="15" ry="47"/><ellipse cx="376" cy="120" rx="15" ry="47"/>
+</g>
+<text x="350" y="183" text-anchor="middle" font-size="16" fill="#166534" font-weight="bold">Coil</text>
+<path d="M376 73 H425 V210 H376 M425 105 H490 M425 210 H490" fill="none" stroke="#374151" stroke-width="3"/>
+<circle cx="550" cy="158" r="43" fill="#fef3c7" stroke="#92400e" stroke-width="4"/>
+<path d="M527 168 Q550 132 573 168" fill="none" stroke="#92400e" stroke-width="3"/>
+<line x1="550" y1="158" x2="567" y2="145" stroke="#92400e" stroke-width="3"/>
+<text x="550" y="218" text-anchor="middle" font-size="15" font-weight="bold">Galvanometer</text>
+<text x="360" y="258" text-anchor="middle" font-size="14" fill="#475569">Moving magnet changes flux and causes galvanometer deflection.</text>
+</svg>
+<p class="caption"><span class="en">Moving the magnet changes magnetic flux through the coil and causes a galvanometer deflection.</span><span class="te">అయస్కాంతాన్ని కదిలించినప్పుడు కాయిల్‌లో అభివాహం మారి గాల్వానోమీటర్ సూది విక్షేపం చెందుతుంది.</span></p>
+</div>`;
+const diagramGenerator=`
+<div class="diagram">
+<svg viewBox="0 0 720 330" role="img" aria-label="AC generator with field magnets, rotating coil, slip rings, brushes and external circuit">
+<defs><marker id="gm" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#374151"/></marker></defs>
+<text x="360" y="24" text-anchor="middle" font-size="21" font-weight="bold">AC Generator</text>
+<rect x="45" y="65" width="75" height="110" rx="7" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="3"/>
+<text x="82" y="126" text-anchor="middle" font-size="29" font-weight="bold" fill="#1d4ed8">N</text>
+<rect x="390" y="65" width="75" height="110" rx="7" fill="#fecaca" stroke="#b91c1c" stroke-width="3"/>
+<text x="428" y="126" text-anchor="middle" font-size="29" font-weight="bold" fill="#b91c1c">S</text>
+<rect x="165" y="82" width="180" height="78" fill="none" stroke="#16803d" stroke-width="6"/>
+<text x="255" y="125" text-anchor="middle" font-size="19" font-weight="bold" fill="#166534">Rotating coil</text>
+<path d="M255 160 V197" stroke="#374151" stroke-width="4"/>
+<circle cx="235" cy="218" r="14" fill="none" stroke="#ea580c" stroke-width="7"/>
+<circle cx="275" cy="218" r="14" fill="none" stroke="#2563eb" stroke-width="7"/>
+<text x="255" y="252" text-anchor="middle" font-size="14">Two slip rings</text>
+<rect x="204" y="263" width="10" height="25" fill="#374151"/>
+<rect x="296" y="263" width="10" height="25" fill="#374151"/>
+<path d="M209 263 V293 H160 V305 H350 V293 H301 V263" fill="none" stroke="#374151" stroke-width="3"/>
+<text x="255" y="324" text-anchor="middle" font-size="13">Brushes and external circuit</text>
+<path d="M140 198 C155 178 177 180 190 196" fill="none" stroke="#374151" stroke-width="3" marker-end="url(#gm)"/>
+<text x="360" y="190" font-size="13" fill="#475569">Rotation</text>
+<text x="540" y="100" font-size="15" font-weight="bold">Working</text>
+<text x="500" y="125" font-size="13">Changing flux</text>
+<text x="500" y="145" font-size="13">induces emf.</text>
+<text x="500" y="174" font-size="13">Current reverses</text>
+<text x="500" y="194" font-size="13">every half-turn.</text>
+</svg>
+<p class="caption"><span class="en">Separate slip rings connect the rotating coil to carbon brushes and the external circuit.</span><span class="te">రెండు స్లిప్ రింగులు తిరిగే కాయిల్‌ను కార్బన్ బ్రష్‌లు, బాహ్య వలయానికి కలుపుతాయి.</span></p>
+</div>`;
+document.getElementById("essay").children[2].querySelector(".answer").insertAdjacentHTML("afterbegin",diagramGenerator);
+document.getElementById("essay").children[3].querySelector(".answer").insertAdjacentHTML("afterbegin",diagramFaraday);
+
+/* Additional diagrams: straight conductor and solenoid. */
+const extraDiagrams=`
+<div class="diagram">
+<svg viewBox="0 0 520 210" role="img" aria-label="Magnetic field circles around a wire">
+<defs><marker id="ar1" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6Z" fill="#2563eb"/></marker></defs>
+<circle cx="245" cy="100" r="28" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#ar1)"/>
+<circle cx="245" cy="100" r="52" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#ar1)"/>
+<circle cx="245" cy="100" r="76" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#ar1)"/>
+<circle cx="245" cy="100" r="9" fill="white" stroke="#dc2626" stroke-width="2"/><circle cx="245" cy="100" r="3" fill="#dc2626"/>
+<text x="263" y="104" font-size="13" fill="#b91c1c">Current out (•)</text>
+<text x="245" y="197" text-anchor="middle" font-size="14">Concentric magnetic field lines</text>
+</svg>
+</div>
+<div class="diagram">
+<svg viewBox="0 0 560 210" role="img" aria-label="Solenoid magnetic field">
+<defs><marker id="ar2" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6Z" fill="#2563eb"/></marker></defs>
+<rect x="150" y="75" width="260" height="62" rx="5" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+<g fill="none" stroke="#1d4ed8" stroke-width="2">
+<path d="M155 76 Q170 52 185 76 T215 76 T245 76 T275 76 T305 76 T335 76 T365 76 T405 76"/>
+<path d="M155 136 Q170 160 185 136 T215 136 T245 136 T275 136 T305 136 T335 136 T365 136 T405 136"/>
+<path d="M150 75 C75 10 485 10 410 75" marker-end="url(#ar2)"/>
+<path d="M150 137 C75 200 485 200 410 137" marker-end="url(#ar2)"/>
+</g>
+<text x="172" y="111" font-size="17" font-weight="bold" fill="#1e40af">S</text>
+<text x="382" y="111" font-size="17" font-weight="bold" fill="#1e40af">N</text>
+<text x="280" y="111" text-anchor="middle" font-size="15" fill="#1e40af">Solenoid</text>
+</svg>
+</div>`;
+document.getElementById("essay").children[4].querySelector(".answer").insertAdjacentHTML("beforeend",extraDiagrams);
+
+/* MCQ: all four options have their own independent Telugu text. */
+const MCQ=[
+["Which device converts electrical energy into mechanical energy?","విద్యుత్ శక్తిని యాంత్రిక శక్తిగా మార్చే పరికరం ఏది?",["Motor","Battery","Generator","Switch"],["మోటార్","బ్యాటరీ","జనరేటర్","స్విచ్"],0,"A motor converts electrical energy into mechanical energy.","మోటార్ విద్యుత్ శక్తిని యాంత్రిక శక్తిగా మారుస్తుంది."],
+["Which device converts mechanical energy into electrical energy?","యాంత్రిక శక్తిని విద్యుత్ శక్తిగా మార్చే పరికరం ఏది?",["Motor","Battery","Generator","Switch"],["మోటార్","బ్యాటరీ","జనరేటర్","స్విచ్"],2,"A generator converts mechanical energy into electrical energy.","జనరేటర్ యాంత్రిక శక్తిని విద్యుత్ శక్తిగా మారుస్తుంది."],
+["A wire is perpendicular to a uniform magnetic field. What is the force on it?","తీగ అయస్కాంత క్షేత్రానికి లంబంగా ఉంటే దానిపై బలం ఎంత?",["0","BIL","2BIL","BIL/2"],["0","BIL","2BIL","BIL/2"],1,"F = BIL sin 90° = BIL.","F = BIL sin 90° = BIL."],
+["What is induced when magnetic flux through a coil changes?","కాయిల్‌లో అయస్కాంత అభివాహం మారినప్పుడు ఏది ప్రేరేపించబడుతుంది?",["An emf","Heat only","Friction","Mass"],["విద్యుచ్చాలక బలం","వేడి మాత్రమే","ఘర్షణ","ద్రవ్యరాశి"],0,"A changing magnetic flux induces an emf.","అయస్కాంత అభివాహ మార్పు వల్ల విద్యుచ్చాలక బలం ప్రేరేపించబడుతుంది."],
+["In the right-hand thumb rule, the thumb points along the direction of:","కుడిచేతి బొటనవేలు నియమంలో బొటనవేలు దేనిని సూచిస్తుంది?",["Conventional current","Magnetic field","Force","Magnetic flux"],["సంప్రదాయ విద్యుత్ ప్రవాహం","అయస్కాంత క్షేత్రం","బలం","అయస్కాంత అభివాహం"],0,"The thumb points in the direction of conventional current.","బొటనవేలు సంప్రదాయ విద్యుత్ ప్రవాహ దిశను సూచిస్తుంది."],
+["The frequency of ideal steady DC is:","స్థిరమైన DC విద్యుత్ పౌనఃపున్యం ఎంత?",["0 Hz","50 Hz","60 Hz","100 Hz"],["0 Hz","50 Hz","60 Hz","100 Hz"],0,"Steady DC does not alternate, so its frequency is 0 Hz.","స్థిర DC దిశను మార్చదు; అందువల్ల దాని పౌనఃపున్యం 0 Hz."],
+["What do magnetic-stripe card readers detect?","మాగ్నెటిక్ స్ట్రైప్ కార్డ్ రీడర్లు దేనిని గుర్తిస్తాయి?",["Encoded magnetic patterns","Sound waves","Temperature","Light colour"],["నమోదు చేసిన అయస్కాంత నమూనాలు","ధ్వని తరంగాలు","ఉష్ణోగ్రత","కాంతి రంగు"],0,"They sense magnetic patterns encoded on the stripe.","స్ట్రైప్‌పై నమోదు చేసిన అయస్కాంత నమూనాలను అవి గుర్తిస్తాయి."],
+["The SI unit of magnetic flux density is:","అయస్కాంత అభివాహ సాంద్రత SI ప్రమాణం ఏది?",["Weber","Tesla","Ampere","Joule"],["వెబర్","టెస్లా","ఆంపియర్","జౌల్"],1,"Magnetic flux density is measured in tesla (T).","అయస్కాంత అభివాహ సాంద్రతను టెస్లా (T)లో కొలుస్తారు."],
+["The SI unit of magnetic flux is:","అయస్కాంత అభివాహ SI ప్రమాణం ఏది?",["Tesla","Weber","Newton","Watt"],["టెస్లా","వెబర్","న్యూటన్","వాట్"],1,"Magnetic flux is measured in weber (Wb).","అయస్కాంత అభివాహాన్ని వెబర్ (Wb)లో కొలుస్తారు."],
+["A current-carrying coil in a motor's magnetic field experiences:","మోటార్‌లో అయస్కాంత క్షేత్రంలో విద్యుత్ ప్రవహించే కాయిల్‌పై ఏమి జరుగుతుంది?",["A turning effect","Dissolving","No possible force","Melting"],["భ్రమణ ప్రభావం","కరిగిపోవడం","బలం ఉండదు","ద్రవీభవనం"],0,"Forces on opposite sides of the coil create torque.","కాయిల్ ఎదురెదురు భుజాలపై బలాలు భ్రమణ ప్రభావాన్ని కలిగిస్తాయి."]
+];
+function renderQuiz(){
+ const host=document.getElementById("quiz");host.innerHTML="";
+ MCQ.forEach((q,i)=>{
+  const card=document.createElement("div");card.className="quizcard";card.id="mcq"+i;
+  card.innerHTML=`<div class="qtext"><span class="en">${i+1}. ${q[0]}</span><span class="te">${i+1}. ${q[1]}</span></div>
+  <div>${q[2].map((o,j)=>`<label class="option"><input type="radio" name="m${i}" value="${j}"><span><span class="en">${String.fromCharCode(65+j)}) ${o}</span><span class="te">${String.fromCharCode(65+j)}) ${q[3][j]}</span></span></label>`).join("")}</div>
+  <div class="feedback" id="fb${i}"></div>`;
+  host.append(card);
+ });
+}
+renderQuiz();
+function submitQuiz(fromLanguage=false){
+ let score=0;
+ MCQ.forEach((q,i)=>{
+  const card=document.getElementById("mcq"+i),fb=document.getElementById("fb"+i);
+  const selected=document.querySelector(`input[name="m${i}"]:checked`);
+  card.classList.remove("correct","wrong");fb.className="feedback show";
+  const exp=isTe?q[6]:q[5];
+  if(selected&&Number(selected.value)===q[4]){
+   score++;card.classList.add("correct");fb.classList.add("good");
+   fb.innerHTML=(isTe?"✓ సరైన సమాధానం! ":"✓ Correct! ")+exp;
+  }else{
+   card.classList.add("wrong");fb.classList.add("bad");
+   const correct=String.fromCharCode(65+q[4])+") "+(isTe?q[3][q[4]]:q[2][q[4]]);
+   fb.innerHTML=(selected?(isTe?"✗ తప్పు సమాధానం. ":"✗ Incorrect. "):(isTe?"⚠ సమాధానం ఇవ్వలేదు. ":"⚠ Not answered. "))+ (isTe?"సరైన సమాధానం: ":"Correct answer: ")+correct+". "+exp;
+  }
+ });
+ const box=document.getElementById("score");box.hidden=false;
+ box.innerHTML=`<h2>${isTe?"మీ మార్కులు":"Your Score"}: ${score} / 10</h2><p>${isTe?"సరైన సమాధానాలు":"Correct answers"}: ${score}; ${isTe?"తప్పు లేదా సమాధానం ఇవ్వనివి":"Incorrect or unanswered"}: ${10-score}</p>`;
+ if(!fromLanguage)box.scrollIntoView({behavior:"smooth",block:"center"});
+}
+function resetQuiz(){
+ document.querySelectorAll('#quiz input[type="radio"]').forEach(x=>x.checked=false);
+ document.querySelectorAll(".quizcard").forEach(x=>x.classList.remove("correct","wrong"));
+ document.querySelectorAll(".feedback").forEach(x=>{x.className="feedback";x.innerHTML=""});
+ const box=document.getElementById("score");box.hidden=true;box.innerHTML="";
+}
+</script>
+</body>
+</html>
